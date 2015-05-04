@@ -28,6 +28,9 @@
   "dependencies": {
     "async": "^0.9.0"
   },
+  "peerDependencies": {
+    "flex-sdk": "git+https://github.com/HBOCodeLabs/node-flex-sdk.git"
+  },
   "devDependencies": {
     "flex-sdk": "git+https://github.com/HBOCodeLabs/node-flex-sdk.git",
     "grunt": "^0.4.5",
