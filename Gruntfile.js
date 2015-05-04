@@ -10,11 +10,9 @@
 
 module.exports = function(grunt) {
 
-  var os = require('os');
-  var tmpDir = typeof os.tmpdir === 'function' ? os.tmpdir() : os.tmpDir();
-
   // Project configuration.
   grunt.initConfig({
+
     jshint: {
       options: {
         jshintrc: '.jshintrc'
@@ -28,11 +26,7 @@ module.exports = function(grunt) {
 
     // Before generating any new files, remove any previously-created files.
     clean: {
-      options: {
-        // `force: true` is required to delete files outside of the current working directory
-        force: true
-      },
-      tests: [tmpDir + '/**/*.swf']
+      tests: ['tmp']
     },
 
     // Configuration to be run (and then tested).
@@ -42,7 +36,7 @@ module.exports = function(grunt) {
       },
       testCompileSuccess: {
         src: ['test/testData/testApp.as'],
-        dest: tmpDir + '/testApp.swf'
+        dest: 'tmp/testApp.swf'
       },
       testCompileFailureDueToSynaxError: {
         options: {
@@ -50,7 +44,7 @@ module.exports = function(grunt) {
           force: true
         },
         src: ['test/testData/errorApp.as'],
-        dest: tmpDir + '/errorApp.swf'
+        dest: 'tmp/errorApp.swf'
       }
     },
 
@@ -71,9 +65,10 @@ module.exports = function(grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('default', ['jshint', 'clean', 'mxmlc', 'nodeunit', 'clean']);
+  grunt.registerTask('test', ['clean', 'compc', 'nodeunit', 'clean']);
 
   // By default, lint and run all tests.
-  grunt.registerTask('travis', ['jshint', 'clean', 'mxmlc', 'nodeunit', 'clean']);
+  grunt.registerTask('default', ['jshint', 'test']);
+  grunt.registerTask('travis', ['jshint', 'test']);
 
 };
