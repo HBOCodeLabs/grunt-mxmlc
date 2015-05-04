@@ -51,6 +51,7 @@
     "compiler",
     "flex",
     "mxml",
+    "mxmlc",
     "actionscript",
     "flv",
     "flash",
