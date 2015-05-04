@@ -2,7 +2,7 @@
  * grunt-mxmlc
  * https://github.com/JamesMGreene/grunt-mxmlc
  *
- * Copyright (c) 2013 James M. Greene
+ * Copyright (c) 2015 James M. Greene, contributors
  * Licensed under the MIT license.
  */
 
