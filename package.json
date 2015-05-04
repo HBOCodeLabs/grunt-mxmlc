@@ -26,13 +26,10 @@
     "test": "grunt travis --verbose"
   },
   "dependencies": {
-    "async": "^0.9.0"
-  },
-  "peerDependencies": {
-    "flex-sdk": "git+https://github.com/HBOCodeLabs/node-flex-sdk.git"
+    "async": "^0.9.0",
+    "flex-sdk": "HBOCodeLabs/node-flex-sdk"
   },
   "devDependencies": {
-    "flex-sdk": "git+https://github.com/HBOCodeLabs/node-flex-sdk.git",
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-jshint": "^0.11.2",
