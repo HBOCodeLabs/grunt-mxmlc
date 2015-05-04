@@ -4,6 +4,9 @@ node_js:
   - 'iojs'
   - '0.12'
   - '0.10'
+cache:
+  directories:
+  - node_modules
 notifications:
   on_success: change
   on_failure: always
