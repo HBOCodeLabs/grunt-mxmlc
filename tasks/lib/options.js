@@ -17,7 +17,7 @@ function optionToString(optionKey, optionValue) {
       case 'string':
         optionStr = optionKey + '=' + optionValue;
         break;
-        
+
       default:
         optionStr = '';
         break;
@@ -33,7 +33,7 @@ var api = {
 
       // Use the `rawConfig` string to ignore all other `options`
       rawConfig: null,
-    
+
       // http://livedocs.adobe.com/flex/3/html/help.html?content=compilers_16.html
       metadata: {
         // `-title "Adobe Flex Application"`
@@ -131,18 +131,18 @@ var api = {
           //       For more info, see http://livedocs.adobe.com/flex/3/html/help.html?content=fonts_06.html
           managers: [],
         },
-        
+
         // TODO: CONTINUE!
-        
-        
+
+
         // `-incremental=false`
         'incremental': false,
-        
+
         // TODO: CONTINUE!
       }
     };
   },
-  
+
   toCommandLineFormat: function(options) {
     var optionStr,
         optionsList = [];
@@ -156,7 +156,7 @@ var api = {
     }
     return optionsList.join(' ') + ' -- ';
   }
-  
+
 };
 
 module.exports = api;
