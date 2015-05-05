@@ -10,7 +10,7 @@
 
 var childProcess = require('child_process');
 var mxmlcOptions = require('./lib/options');
-var flexSdk = require('flex-sdk');
+var flexSdk = require('@dpwolfe/flex-sdk');
 var async = require('async');
 
 module.exports = function(grunt) {
