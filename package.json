@@ -20,6 +20,10 @@
   "scripts": {
     "test": "grunt travis --verbose"
   },
+  "engines" : {
+    "node" : "^0.12.2",
+    "npm" : "^2.7.4"
+  },
   "dependencies": {
     "async": "^0.9.0"
   },
