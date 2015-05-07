@@ -28,10 +28,10 @@
     "async": "^0.9.0"
   },
   "peerDependencies": {
-    "@dpwolfe/flex-sdk": "^4.14.1-4"
+    "@dpwolfe/flex-sdk": "*"
   },
   "devDependencies": {
-    "@dpwolfe/flex-sdk": "^4.14.1-4",
+    "@dpwolfe/flex-sdk": "*",
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-jshint": "^0.11.2",
