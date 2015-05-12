@@ -12,6 +12,7 @@ var childProcess = require('child_process');
 var mxmlcOptions = require('./lib/options');
 var flexSdk = require('@dpwolfe/flex-sdk');
 var async = require('async');
+var mxmlcFlexConfig = require('./lib/flexConfig');
 
 module.exports = function(grunt) {
 
@@ -46,6 +47,16 @@ module.exports = function(grunt) {
         cmdLineOpts.push('-output');
         cmdLineOpts.push(f.dest);
       }
+
+      if (options.useIncludes) {
+        // build a config that includes all classes referenced in src list
+        var configPath = mxmlcFlexConfig.includeClassesFromFiles(options.sourcePath, srcList);
+        grunt.verbose.writeln('created config with include-classes: ' + configPath);
+        cmdLineOpts.push('-load-config+=' + configPath);
+        // use only the top level MXML component definition
+        srcList = [options.mxml];
+      }
+
       cmdLineOpts.push('--');
       cmdLineOpts.push.apply(cmdLineOpts, srcList);
 
