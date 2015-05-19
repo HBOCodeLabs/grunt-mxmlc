@@ -48,6 +48,14 @@ module.exports = function(grunt) {
         cmdLineOpts.push(f.dest);
       }
 
+      if (options.defines && typeof options.defines === 'object') {
+          for (var key in options.defines) {
+              if (options.defines.hasOwnProperty(key)) {
+                  cmdLineOpts.push('-define=' + key + "," + options.defines[key]);
+              }
+          }
+      }
+
       if (options.useIncludes) {
         // build a config that includes all classes referenced in src list
         var configPath = mxmlcFlexConfig.includeClassesFromFiles(options.sourcePath, srcList);
