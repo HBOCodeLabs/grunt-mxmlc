@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/HBOCodeLabs/grunt-mxmlc.svg?branch=master)](https://travis-ci.org/HBOCodeLabs/grunt-mxmlc)
+
 # grunt-mxmlc
 
 > A Grunt task plugin to compile Adobe Flex/ActionScript/MXML/FLV/etc. apps with the `mxmlc` compiler from the Apache/Adobe Flex SDK.
@@ -78,5 +80,5 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## License
-Copyright (c) 2013 James M. Greene  
+Copyright (c) 2013 James M. Greene
 Licensed under the MIT license.
