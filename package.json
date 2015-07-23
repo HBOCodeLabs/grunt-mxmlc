@@ -1,7 +1,7 @@
 {
   "name": "@dpwolfe/grunt-mxmlc",
   "description": "A Grunt task plugin to compile Adobe Flex/ActionScript/MXML/FLV/etc. apps with the `mxmlc` compiler from the Apache/Adobe Flex SDK.",
-  "version": "0.5.7",
+  "version": "0.5.8",
   "homepage": "https://github.com/JamesMGreene/grunt-mxmlc",
   "author": {
     "name": "James M. Greene",
@@ -26,13 +26,10 @@
   },
   "dependencies": {
     "async": "^1.2.1",
-    "temp": "^0.8.3"
-  },
-  "peerDependencies": {
+    "temp": "^0.8.3",
     "@dpwolfe/flex-sdk": "*"
   },
   "devDependencies": {
-    "@dpwolfe/flex-sdk": "*",
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-jshint": "^0.11.2",
